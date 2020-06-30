@@ -7,8 +7,8 @@
 
 <h1>prnt.sc navigator2</h1>
 
-<iframe src="https://prnt.sc/aa0043" title="PRNT.SC">
-</iframe>
+<a href="https://prnt.sc/aa0043">
+</a>
 
   <script>
     var link = document.querySelector('link[rel="import"]');
