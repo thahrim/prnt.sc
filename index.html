@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <link rel="import" href="https://prnt.sc/aa0043">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <style>
+   .btn {
+     background-color: #4CAF50;
+     border: 1px solid #000;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+   }
+   #lettersInput{
+     width: 18px;
+     border: 2px solid #000;
+     text-align: center;
+   }
+   body {
+     text-align: center;
+   }
+   hr{
+     border: 1px solid #000;
+   }
+   </style>
+
+  </head>
+<body>
+
+<h1>prnt.sc navigator</h1>
+<hr>
+<input id="lettersInput" maxlength="2" type="text" value="aa" label="first letters"></input><br>
+<label for="lettersInput">first letters</label><br><br>
+<a id="linky" onClick="changeUrl();" class="btn" target="_blank" >Plus 1
+</a><br><label for="linky">increments by 1</label><br><br>
+<a id="linkyRand" onClick="changeUrl('rand');" class="btn" target="_blank" >Random
+</a><br><label for="linkyRand">random numbers</label>
+<br><br><br>
+<hr>
+<p>🍁made by rimz.&#127464;&#127462;</p><a href="https://www.tiktok.com/@416_647_905">@416_647_905</a><br>
+<a href='https://www.stat-counter.org/'>Hit&Visitor Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=0a87bfd448434a1288e418115949bfe10d949250'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/712710/t/0"></script>
+  <script>
+  function zeroPad(num) {
+  return num.toString().padStart(4, "0");
+}
+
+
+  var number = 0001;
+  var letters = "aa";
+  function changeUrl(arg0){
+   var url = "https://prnt.sc/";
+   var letters = document.getElementById('lettersInput').value;
+   var numbers = zeroPad(number);
+   if (arg0 == "rand"){
+     var num = zeroPad(Math.floor(Math.random() * 1000) + 1);
+     var link = document.getElementById('linkyRand');
+     link.innerHTML = url + letters + num;
+     link.href = url + letters + num;
+   }
+   else{
+   number += 1;
+   var link = document.getElementById('linky');
+   link.innerHTML = url + letters + numbers;
+   link.href = url + letters + numbers;
+ }
+
+
+  }
+  </script>
+</body>
+</html>
